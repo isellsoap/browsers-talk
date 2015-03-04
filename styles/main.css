@@ -19,3 +19,13 @@ input {
   margin-right: 1em;
   width: 12em;
 }
+
+p,
+ul,
+form {
+  margin-bottom: 1em;
+}
+
+ul {
+  margin-left: 2em;
+}
