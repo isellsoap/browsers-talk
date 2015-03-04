@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "helvetica neue", helvetiva, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 2em;
+}
+
+label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+input {
+  margin-right: 1em;
+  width: 12em;
+}
