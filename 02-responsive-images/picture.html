@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>picture – Responsive images</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <p><a href="../index.html">← back to homepage</a></p>
+
+    <h1><code>picture</code></h1>
+
+    <picture>
+      <!-- wide ratio -->
+      <source
+        media="(min-width: 620px)"
+        srcset="wide-large.jpg 1920w,
+                wide-medium.jpg 960w,
+                wide-small.jpg 480w">
+      <!-- square ratio -->
+      <source
+        srcset="square-large.jpg 1240w,
+                square-medium.jpg 620w,
+                square-small.jpg 310w">
+      <!-- fallback -->
+      <img  src="square-medium.jpg"
+            alt="Alternative text.">
+    </picture>
+  </body>
+</html>

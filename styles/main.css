@@ -34,3 +34,8 @@ input {
   margin-right: 1em;
   width: 12em;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}
