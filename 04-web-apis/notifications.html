@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Notifications – Web APIs</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <p><a href="../index.html">← back to homepage</a></p>
+
+    <form action="">
+      <label>
+        Custom message:
+        <input type="text" id="custom-message">
+      </label>
+      <input type="submit" id="submit" value="Show notification">
+    </form>
+    <script>
+      function notifyUser(event) {
+        event.preventDefault();
+
+        var customMessage = document.getElementById('custom-message').value || 'Please enter a custom notification.';
+
+        if (!('Notification' in window)) {
+          alert('This browser does not support desktop notifications.');
+        } else if (Notification.permission === 'granted') {
+          var notification = new Notification(customMessage);
+        } else if (Notification.permission !== 'denied') {
+          Notification.requestPermission(function (permission) {
+            if (permission === 'granted') {
+              var notification = new Notification(customMessage);
+            }
+          });
+        }
+      }
+
+      document.getElementById('submit').addEventListener('click', notifyUser);
+    </script>
+  </body>
+</html>
