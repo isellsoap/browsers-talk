@@ -25,6 +25,10 @@ ul {
   margin-left: 2em;
 }
 
+ul ul {
+  margin-bottom: 0;
+}
+
 label {
   display: block;
   margin-bottom: 1em;
