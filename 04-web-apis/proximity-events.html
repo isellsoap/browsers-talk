@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Proximity events – Web APIs</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <p><a href="../index.html">← back to homepage</a></p>
+    <script>
+      window.addEventListener('userproximity', function(event) {
+        if (event.near) {
+          // let's power off the screen
+          navigator.mozPower.screenEnabled = false;
+        } else {
+          // Otherwise, let's power on the screen
+          navigator.mozPower.screenEnabled = true;
+        }
+      });
+    </script>
+  </body>
+</html>
